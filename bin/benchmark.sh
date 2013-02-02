@@ -93,7 +93,7 @@ fi
 
 
 ####### first start the master
-cd ${RADARGUN_HOME}/../wpm ; ./run_log_service.sh;
+cd ${RADARGUN_HOME}/../wpm ; ./run_log_service.sh; cd ${RADARGUN_HOME}
 . ${RADARGUN_HOME}/bin/master.sh -s ${SLAVE_COUNT} -m ${MASTER}
 PID_OF_MASTER_PROCESS=$RADARGUN_MASTER_PID
 #### Sleep for a few seconds so master can open its port
