@@ -3,8 +3,8 @@
             bindAddress="${127.0.0.1:master.address}"
             port="${2103:master.port}"/>
     <benchmark
-            initSize="4"
-            maxSize="4"
+            initSize="2"
+            maxSize="2"
             increment="2">
             
         <!--DestroyWrapper
@@ -33,8 +33,8 @@
                 statName="CACHE_SIZE_BEFORE_BENCH"/>
         <TpccBenchmark
                 statsSamplingInterval="30000"
-                numOfThreads="3"
-                perThreadSimulTime="180"
+                numOfThreads="2"
+                perThreadSimulTime="1800"
                 arrivalRate="0"
                 accessSameWarehouse="false"
                 paymentWeight="43"
@@ -46,128 +46,6 @@
       <EraseNewKeys batchSize="50"/>
 <ResetStats/>
 
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="5"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="43"
-                orderStatusWeight="53"
-                retryOnAbort="true"
-		backOffTime="0"
-                perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>
-<ResetStats/>
-
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="8"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="43"
-                orderStatusWeight="53"
-                retryOnAbort="true"
-		backOffTime="0"
-                perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>
-<ResetStats/>
-
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="11"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="43"
-                orderStatusWeight="53"
-                backOffTime="0"
-		retryOnAbort="true"
-                perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>         
-<ResetStats/>
-         
-         
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="30000"
-                numOfThreads="3"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="5"
-                orderStatusWeight="90"
-		retryOnAbort="true"
-		backOffTime="0"
-		perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>
-<ResetStats/>
-
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="5"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="5"
-                orderStatusWeight="90"
-                retryOnAbort="true"
-		backOffTime="0"
-                perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>
-<ResetStats/>
-
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="8"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="5"
-                orderStatusWeight="90"
-                retryOnAbort="true"
-		backOffTime="0"
-                perThreadTrackNewKeys="true"/>
-<TpccCsvReportGeneration/>
-      <EraseNewKeys batchSize="50"/>
-<ResetStats/>
-
-
-        <CacheSize
-                statName="CACHE_SIZE_BEFORE_BENCH"/>
-        <TpccBenchmark
-                statsSamplingInterval="5000"
-                numOfThreads="11"
-                perThreadSimulTime="180"
-                arrivalRate="0"
-                accessSameWarehouse="false"
-                paymentWeight="5"
-                orderStatusWeight="90"
-                backOffTime="0"
-		retryOnAbort="true"
-                perThreadTrackNewKeys="true"/>
  
 <TpccCsvReportGeneration/>
  </benchmark>
